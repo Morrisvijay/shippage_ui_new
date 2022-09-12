@@ -10,9 +10,10 @@
     background-color: transparent;
   }
   .navbar.active {
-    background: linear-gradient(90deg, white 0%, #6999a4 0%, #8fcddb 0%, #225f75 0%);
-    //background-color: #566b91 !important;
-    box-shadow: 0px 8px 12px 5px rgb(183 192 206 / 20%);
+   //background: linear-gradient(90deg, white 0%, #6999a4 0%, #8fcddb 0%, #225f75 0%);
+   background-color: #ffffff !important;
+   //box-shadow: 0px 8px 12px 5px rgb(183 192 206 / 20%);
+   box-shadow:0px 0px 0px 0px rgb(183 192 206 / 20%);
     position: fixed;
     .nav {
       > li {
@@ -220,7 +221,7 @@
 .logo-white {
   .navbar-header {
     background-color: #fff0;
-
+    float: right;
     .logo-name {
       color: #000;
     }

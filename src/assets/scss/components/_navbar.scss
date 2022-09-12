@@ -3,7 +3,7 @@
  *  Author     : RedStar Template
  *  Description: This scss file for navbar style classes
  */
-.navbar {
+ .navbar {
   font-family: $navbar-font-family;
   @include border-radius(0);
   box-shadow: none;
@@ -15,7 +15,6 @@
   z-index: 999;
   width: 100%;
   padding: 0;
-  justify-content: flex-start !important;
 
   .navbar-brand {
     @include three-dots-overflow();
@@ -63,7 +62,7 @@
   .collapse-menu-icon {
     margin-bottom: 0px;
     line-height: 60px;
-    padding-left: 30px;
+    padding-left: 208px;
     padding-right: 30px;
   }
   .header-icon {
@@ -131,8 +130,8 @@
 }
 
 .navbar-header {
-  
-  width: 17%;
+  padding: 8px;
+  width: 115px;
   @include transition(all 0.5s);
 
   .bars {
@@ -163,8 +162,7 @@
   &.navbar-right {
     float: right !important;
     margin-right: 10px;
-    line-height: 40px;
-    margin-top: 1px;
+    line-height: 60px;
     // .nav-item {
     //   margin: 0px 4px;
     // }
@@ -173,7 +171,6 @@
       margin: 0px 6px 0px 0px;
       .dropdown-toggle {
         cursor: pointer;
-        color: white;
       }
       .user_img {
         float: right;
@@ -396,7 +393,6 @@
   }
   .fullscreen {
     margin: 0px 8px;
-    color: white;
   }
   .langSelItem {
     margin: 0px 8px;
@@ -423,7 +419,7 @@
   }
 }
 nav.navbar {
-  min-height: 70px;
+  min-height: 60px;
 }
 
 @each $key, $val in $colors {
@@ -468,7 +464,7 @@ nav.navbar {
       }
     }
     .navbar-header {
-      width: 65px;
+      width: 100px;
       .navbar-brand {
         padding-right: 0;
         padding-left: 0;
@@ -537,6 +533,12 @@ nav.navbar {
       margin-left: 276px;
     }
   }
+  .collapse-menu-icon {
+    margin-bottom: 0px;
+    line-height: 60px;
+    padding-left: 60px;
+    padding-right: 30px;
+}
 }
 .sidemenu-collapse {
   height: 50px;

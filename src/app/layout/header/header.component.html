@@ -1,10 +1,10 @@
 <nav #navbar class="navbar active">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a href="#" onClick="return false;" class="navbar-toggle collapsed"
-        (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-expanded="false"></a>
-      <a href="#" onClick="return false;" class="bars" (click)="mobileMenuSidebarOpen($event,'overlay-open')"></a>
-      <a class="navbar-brand" routerLink={{homePage}} style="padding-left: 102px;padding-top: 13px;">
+      <!-- <a href="#" onClick="return false;" class="navbar-toggle collapsed"
+        (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-expanded="false"></a> -->
+        <a href="#" onClick="return false;" class="bars"  (click)="mobileMenuSidebarOpen($event,'overlay-open')"></a>
+        <a class="navbar-brand" routerLink={{homePage}}>
         <img src="assets/images/icons/ship-logo.png" alt="" /> 
       </a>
     </div>
@@ -18,11 +18,11 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <!-- Full Screen Button -->
-        <li class="fullscreen">
+         <!-- <li class="fullscreen">
           <button mat-icon-button (click)="callFullscreen()" class=" nav-notification-icons">
             <app-feather-icons [icon]="'maximize'" [class]="'header-icon'"></app-feather-icons>
           </button>
-        </li>
+         </li> -->
         <!-- #END# Full Screen Button -->
         <!-- <li class="nav-item langSelItem" ngbDropdown>
           <a ngbDropdownToggle class="lang-dropdown">
@@ -38,7 +38,7 @@
           </div>
         </li> -->
         <!-- #START# Notifications-->
-        <li class="nav-item btnNotification" ngbDropdown>
+        <!-- <li class="nav-item btnNotification" ngbDropdown>
           <button mat-icon-button ngbDropdownToggle class="nav-notification-icons">
             <app-feather-icons [icon]="'bell'" [class]="'header-icon'"></app-feather-icons>
             <span class="label-count bg-orange"></span>
@@ -72,9 +72,9 @@
             <a class="nfc-read-more">Read
               All Notifications</a>
           </div>
-        </li>
+        </li> -->
         <!-- #END# Notifications-->
-        <li class="nav-item user_profile btnUserDropdown" ngbDropdown>
+         <!-- <li class="nav-item user_profile btnUserDropdown" ngbDropdown>
           <div class="chip dropdown-toggle" ngbDropdownToggle class="nav-notification-icons pt-0">
             <img src="/assets/images/products/21-avatar-flat (2).gif" class="user_img" width="32" height="32" alt="User">
             <span>Ella Jones</span>
@@ -109,7 +109,7 @@
               </ul>
             </div>
           </div>
-        </li>
+        </li> -->
         <!-- #END# Tasks -->
       </ul>
     </div>

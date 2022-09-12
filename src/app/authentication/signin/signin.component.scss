@@ -92,7 +92,7 @@
 ::ng-deep.mat-form-field-appearance-outline .mat-form-field-outline {
     box-shadow: -5px -5px 20px #fff, 0px 5px 11px #c3c6d1;
     border-radius: 8px;
-    color: rgb(32 18 255) !important;
+    color: #225f75 !important;
 }
 
 .mat-form-field-wrapper {
@@ -113,4 +113,61 @@
     padding-left: 4em!important;
     margin-bottom: 2%;
     margin-top: -20px;
+}
+
+// sign in field legend to border gap
+:host ::ng-deep.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-outline-gap {
+    border-top-color: #225f75 !important;
+ }
+
+// disply none for the field legend
+
+:host ::ng-deep.mat-form-field-can-float .mat-form-field-autofill-control:-webkit-autofill+.mat-form-field-label-wrapper .mat-form-field-label {
+     display: none !important;
+     transition: none;
+ }
+
+ :host ::ng-deep.mat-form-field-empty.mat-form-field-label, .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+     display: none;
+ }
+
+ :host ::ng-deep.mat-form-field-empty.mat-form-field-label, .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+     display: none;
+ }
+
+
+ :host ::ng-deep.mat-form-field-subscript-wrapper {
+    font-size: 75%;
+    margin-top: -2.333333em !important;
+    top: calc(100% - 1.7916666667em);
+}
+
+:host ::ng-deep.mat-form-field-empty.mat-form-field-label, .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    display: block !important;
+}
+
+:host ::ng-deep.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    display: none !important;
+}
+
+.mb-2 {
+    margin-bottom: -1.5rem!important;
+}
+
+:host ::ng-deep.mat-form-field-appearance-outline .mat-form-field-outline{
+    color:rgb(161 161 161);
+   background-color: #fefeff !important; 
+   height:60%;
+   border-radius: 24px !important; 
+   box-shadow: 0px 2px 13px -6px rgb(0 0 0 / 67%) !important;
+   }
+
+:host ::ng-deep.mat-form-field-appearance-outline .mat-form-field-outline-start{
+    border-radius: 24px 0 0 24px !important;
+    min-width: 28px !important;
+}
+
+:host ::ng-deep.mat-form-field-appearance-outline .mat-form-field-outline-end {
+  border-radius:0 24px  24px 0 !important; 
+    min-width: 28px !important; 
 }

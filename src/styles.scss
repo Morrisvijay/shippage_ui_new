@@ -16,33 +16,32 @@
        
    }
    
-   .mat-form-field {
-       font-size: 12px !important;
-       // font-family: 'Times New Roman', Times, serif;
-       // font-style: italic;
-       height:20%;
-       
-   }
+//    .mat-form-field {
+//     font-size: 12px !important;
+//     // font-family: 'Times New Roman', Times, serif;
+//     // font-style: italic;
+//     height:20%;
+//    }
    
-    .mat-form-field-appearance-outline .mat-form-field-label {
-       font-size: 12x !important;
-       top: 0.84375em !important;
-       height: 80%;
+//     .mat-form-field-appearance-outline .mat-form-field-label {
+//        font-size: 12x !important;
+//        top: 0.84375em !important;
+//        height: 80%;
        
-   }
-   .mat-form-field-label:not(.mat-form-field-empty){
-       top: 21px !important;
+//    }
+//    .mat-form-field-label:not(.mat-form-field-empty){
+//        top: 21px !important;
      
-   }
-   .mat-form-field.mat-focused .mat-form-field-label{
-       top: 21px !important;
+//    }
+//    .mat-form-field.mat-focused .mat-form-field-label{
+//        top: 21px !important;
        
        
-   }
+//    }
    .mat-error {
        font-size: 11px !important;
-       font-family: 'Times New Roman', Times, serif;
-       font-style: italic;
+      // font-family: 'Times New Roman', Times, serif;
+       //font-style: italic;
        margin-top: 2%;
    }
    .mat-mini-fab .mat-button-wrapper {

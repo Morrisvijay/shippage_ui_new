@@ -63,7 +63,7 @@ export class SigninComponent
       password: ["", Validators.required],
       otpValue: [""],
       userNameEmailId: [""],
-      recaptchaResponse: [""],
+      // recaptchaResponse: [""],
     });
   }
   get f() {
@@ -85,14 +85,14 @@ export class SigninComponent
     this.submitted = true;
     this.loading = true;
     this.error = "";
-    const response = grecaptcha.getResponse();
+     // const response = grecaptcha.getResponse();
     if (this.authForm.invalid) {
       this.error = "Username and Password not valid !";
       return;
     } else {
 
       this.loginInfo = new AuthLoginInfo(
-      this.f.username.value, this.f.password.value,this.f.otpValue.value,this.f.userNameEmailId.value,this.f.recaptchaResponse.value);
+        this.f.username.value, this.f.password.value,this.f.otpValue.value,this.f.userNameEmailId.value);
 
       this.authService.attemptAuth(this.loginInfo).subscribe(
       data => {
@@ -136,7 +136,7 @@ export class SigninComponent
             console.log(error); 
             
         },
-        grecaptcha.reset()
+         // grecaptcha.reset()
       );
 
     }
@@ -144,7 +144,7 @@ export class SigninComponent
 
   verifyOtp(){
     this.loginInfo = new AuthLoginInfo(
-      this.f.username.value, this.f.password.value,this.f.otpValue.value,this.f.userNameEmailId.value,this.f.recaptchaResponse.value);
+      this.f.username.value, this.f.password.value,this.f.otpValue.value,this.f.userNameEmailId.value);
     console.log(this.loginInfo);
     this.authService.attemptOtpValidation(this.loginInfo).subscribe(
       data => {        
@@ -180,7 +180,7 @@ export class SigninComponent
 
   resendOtpNo(){
     this.loginInfo = new AuthLoginInfo(
-      this.f.username.value, this.f.password.value,this.f.otpValue.value,this.f.userNameEmailId.value,this.f.recaptchaResponse.value);
+      this.f.username.value, this.f.password.value,this.f.otpValue.value,this.f.userNameEmailId.value);
     console.log(this.loginInfo);
     this.login=true;
     // resetting the time again for 300s
@@ -222,7 +222,7 @@ export class SigninComponent
 
   forgottPasswordButton(){
     this.loginInfo = new AuthLoginInfo(
-    this.f.username.value, this.f.password.value,this.f.otpValue.value,this.f.userNameEmailId.value,this.f.recaptchaResponse.value);
+      this.f.username.value, this.f.password.value,this.f.otpValue.value,this.f.userNameEmailId.value);
     this.authService.forgotPasswordService(this.loginInfo).subscribe(
       data => {        
        if(data) {

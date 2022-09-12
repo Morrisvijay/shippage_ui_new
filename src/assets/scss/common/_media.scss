@@ -113,7 +113,7 @@
   .navbar-header {
     margin-right: -15px;
     margin-left: -15px;
-    border-right: 1px solid #f2f4f9;
+    //border-right: 1px solid #f2f4f9;
   }
   .navbar-collapse {
     margin-right: -15px;
@@ -149,7 +149,7 @@
     .navbar-header {
       display: inline-block;
       // margin-bottom: -25px;
-      width: calc(100% + 30px);
+      width: calc(33% + 30px);
       float: left;
     }
 
@@ -183,7 +183,7 @@
     }
   }
   .side-closed.submenu-closed .navbar-header {
-    width: calc(100% + 30px) !important;
+    width: calc(18% + 30px) !important;
   }
   .side-closed.submenu-closed .navbar-header .navbar-brand span {
     display: inline-block !important;

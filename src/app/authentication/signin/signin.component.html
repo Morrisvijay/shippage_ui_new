@@ -14,7 +14,7 @@
               Login to<br> Shippage</h1>  
           </div>
           <div class="lbl-alert mb-3">
-            <h5 style="text-align: center;color: #225f75;padding-top: 2%;padding-bottom: 5%;word-spacing: 3px;">Your one stop Logistic Solution</h5> 
+            <h5 style="text-align: center;color: #225f75;padding-top: 2%;padding-bottom: 20%;word-spacing: 3px;">Your One Stop Logistics Solution</h5>
           </div>
           <!-- <h2 *ngIf="!login && !forgot" class="login-title">Sign in</h2>
           <h2 *ngIf="login" class="login-title">Enter Your OTP Number</h2>
@@ -73,24 +73,36 @@
                 </mat-form-field>
               </div>
             </div>
-            <div class="d-flex justify-content-between align-items-center mb-5">
-              <!-- <div *ngIf="!login && !forgot" class="form-check">
+           <!--  <div class="d-flex justify-content-between align-items-center mb-5">
+              <div *ngIf="!login && !forgot" class="form-check">
                 <label class="form-check-label">
                   <input class="form-check-input" type="checkbox" value=""> Remember me
                   <span class="form-check-sign">
                     <span class="check"></span>
                   </span>
                 </label>
-              </div> -->
+              </div> 
               <ngx-recaptcha2 *ngIf="!forgot && !login" class="form-check" #captchaElem [siteKey]="siteKey" formControlName="recaptchaResponse"></ngx-recaptcha2>
-              <!-- <div class="form-check">
+               <div class="form-check">
                 <a class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-2" *ngIf="!forgot && !login" href="#" style="text-decoration: none; text-align:right ;" (click)="forgotpassword()">Forgotten Password?</a>
               </div>  -->
-              <!-- <a class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-2" *ngIf="forgot" href="#" style="text-decoration: none; text-align:right;" (click)="backToSignInPage()">Login page?</a> -->
+              <!-- <a class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-2" *ngIf="forgot" href="#" style="text-decoration: none; text-align:right;" (click)="backToSignInPage()">Login page?</a> 
+            </div>-->
+
+            <div *ngIf="error" class="alert alert-danger mt-3 mb-0 alertColor">{{error}}</div>
+            <div class="container-auth-form-btn">
+              <div style="text-align:center">
+                <button *ngIf="!login && !forgot" mat-raised-button color="primary" style="background-color: #2c8fff;border-radius: 30px; width: 60%;;color: aliceblue;"   [class.auth-spinner]="loading" [disabled]="loading"
+                (click)="onSubmit()" class="auth-form-btn" [disabled]="!authForm.valid " type="submit">Login</button>
+                <button *ngIf="login" mat-raised-button color="primary" style="background-color: #2c8fff;border-radius: 30px; width: 60%;;color: aliceblue;"   [class.auth-spinner]="loading" [disabled]="loading"
+                (click)="verifyOtp()" class="auth-form-btn" [disabled]="!authForm.valid " type="submit">Verify OTP</button>
+                <button *ngIf="forgot" mat-raised-button color="primary" style="background-color: #2c8fff;border-radius: 30px; width: 60%;color: aliceblue;"   [class.auth-spinner]="loading" [disabled]="loading"
+                (click)="forgottPasswordButton()" class="auth-form-btn"  type="submit">Submit</button>
+              </div>
             </div>
 
             <div class="">
-              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="display: flex;">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="display: flex;justify-content: space-evenly;">
                 <div class="col-md-5" style="text-align:center">
                   <a class="txt1" routerLink="/authentication/signup">Sign Up</a>
                 </div>
@@ -103,17 +115,7 @@
               </div>
 
             </div>
-            <div *ngIf="error" class="alert alert-danger mt-3 mb-0 alertColor">{{error}}</div>
-            <div class="container-auth-form-btn">
-              <div style="text-align:center">
-                <button *ngIf="!login && !forgot" mat-raised-button color="primary" style="background-color: #2c8fff;border-radius: 30px; width: 60%;;color: aliceblue;"   [class.auth-spinner]="loading" [disabled]="loading"
-                (click)="onSubmit()" class="auth-form-btn" [disabled]="!authForm.valid " type="submit">Login</button>
-                <button *ngIf="login" mat-raised-button color="primary" style="background-color: #2c8fff;border-radius: 30px; width: 60%;;color: aliceblue;"   [class.auth-spinner]="loading" [disabled]="loading"
-                (click)="verifyOtp()" class="auth-form-btn" [disabled]="!authForm.valid " type="submit">Verify OTP</button>
-                <button *ngIf="forgot" mat-raised-button color="primary" style="background-color: #2c8fff;border-radius: 30px; width: 60%;color: aliceblue;"   [class.auth-spinner]="loading" [disabled]="loading"
-                (click)="forgottPasswordButton()" class="auth-form-btn"  type="submit">Submit</button>
-              </div>
-            </div>
+            
           </form>
         </div>
       </div>
